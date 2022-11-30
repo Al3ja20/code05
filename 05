@@ -1,0 +1,32 @@
+  //Multiplicación
+  if (buttonStateE && !buttonStateF && buttonStateG) {
+    if (buttonStateA && buttonStateC) {
+      ledPinS0 = true;
+    } else {
+      ledPinS0 = false;
+    }
+
+    if ((buttonStateB && buttonStateC) ^ (buttonStateA && buttonStateD)) {
+      // turn LED on:
+      ledPinS1 = true;
+    } else {
+      // turn LED off:
+      ledPinS1 = false;
+    }
+
+    if (((buttonStateB && buttonStateC) && (buttonStateA && buttonStateD)) ^ (buttonStateB && buttonStateD)) {
+      // turn LED on:
+      ledPinA0 = true;
+    } else {
+      // turn LED off:
+      ledPinA0 = false;
+    }
+
+    if (((buttonStateB && buttonStateC) && (buttonStateA && buttonStateD)) && (buttonStateB && buttonStateD)) {
+      // turn LED on:
+      ledPinA1 = true;
+    } else {
+      // turn LED off:
+      ledPinA1 = false;
+    }
+  }
